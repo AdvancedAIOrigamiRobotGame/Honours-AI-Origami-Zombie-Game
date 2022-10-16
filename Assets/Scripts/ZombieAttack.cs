@@ -14,6 +14,8 @@ public class ZombieAttack : MonoBehaviour
     private Ragdoll RagdollEnabler;
     [SerializeField]
     private float FadeOutDelay = 10f;
+    [SerializeField]
+    public string zombieR;
 
     public delegate void DeathEvent(ZombieAttack Attackable);
     public DeathEvent OnDie;
@@ -23,6 +25,7 @@ public class ZombieAttack : MonoBehaviour
 
     private void Start()
     {
+        zombieR = scheme.createRepresentation(1);
         if (RagdollEnabler != null)
         {
             RagdollEnabler.EnableAnimator();

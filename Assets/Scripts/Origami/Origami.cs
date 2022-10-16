@@ -78,14 +78,19 @@ public class Origami : MonoBehaviour
 
             if (CurrentAttackable != closestAttackable)
             {
+                //closestAttackable.Zombierepresentation
                 CurrentAttackable = closestAttackable;
-
-                if (AttackCoroutine != null)
+                bool isSelf = NSA.detectNonSelf(CurrentAttackable.zombieR);
+                if (!isSelf)
                 {
-                    StopCoroutine(AttackCoroutine);
-                }
+                    if (AttackCoroutine != null)
+                    {
+                        StopCoroutine(AttackCoroutine);
+                    }
 
-                AttackCoroutine = StartCoroutine(Attack(closestAttackable));
+                    AttackCoroutine = StartCoroutine(Attack(closestAttackable));
+                }
+               
             }
         }
         else

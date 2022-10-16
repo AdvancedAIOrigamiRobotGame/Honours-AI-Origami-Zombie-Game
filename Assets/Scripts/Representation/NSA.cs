@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class NSA : MonoBehaviour
+public class NSA: MonoBehaviour
 {
     
-    public List<Detector> finalDetectors = new List<Detector>();
+    public static List<Detector> finalDetectors = new List<Detector>();
     public static List<string> selfSpace = new List<string>();
     public static int nOrigamis;
 
@@ -19,7 +19,7 @@ public class NSA : MonoBehaviour
     }
 
     //Censoring phase
-    public void GenerateNonSelfDetectors(List<string> self, int nDectecors)
+    public static void GenerateNonSelfDetectors(List<string> self, int nDectecors)
     {
         //Generate initial Detectors
         System.Random rand = new System.Random();
@@ -57,7 +57,7 @@ public class NSA : MonoBehaviour
     }
 
     //Monitoring stage
-    public bool detectNonSelf(string s)
+    public static bool detectNonSelf(string s)
     {
         foreach (Detector detector in finalDetectors)
         {
@@ -80,15 +80,20 @@ public class NSA : MonoBehaviour
     {
        // while (nOrigamis != 5) { continue; }
         GenerateNonSelfDetectors(selfSpace, 10);
-        Console.WriteLine("Origami List");
+        Debug.Log("Origami List");
+        int nSelf = 0;
+
         foreach(string s in selfSpace)
         {
-            Console.WriteLine(s);
+            Debug.Log("S " + nSelf++ + "- "  + s);
         }
-        Console.WriteLine("Detectors");
+
+        Debug.Log("Detectors");
+        int nD = 0;
         foreach(Detector detector in finalDetectors)
         {
-            Console.WriteLine(detector.representation);
+            Debug.Log("D  " + nD++ + "- " + detector.representation);
+            Console.WriteLine("D  " + nD++ + "- " + detector.representation);
         }
     }
 

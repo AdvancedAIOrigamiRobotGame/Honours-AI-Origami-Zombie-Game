@@ -7379,6 +7379,7 @@ GameObject:
   - component: {fileID: 1197862920}
   - component: {fileID: 1197862919}
   - component: {fileID: 1197862921}
+  - component: {fileID: 1197862922}
   m_Layer: 0
   m_Name: Origami1
   m_TagString: Untagged
@@ -7516,6 +7517,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Origamirepresentation: 
+--- !u!114 &1197862922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197862914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba51f6c575cf13b4e844ba5fb2330758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1204658010 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2077893249738018733, guid: 6dc4cf4496348884d8ee27743ae38562, type: 3}

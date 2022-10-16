@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class matchingRule : MonoBehaviour
+public class matchingRule
 {
     public class Classifier
     {
