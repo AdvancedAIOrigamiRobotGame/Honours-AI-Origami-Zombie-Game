@@ -5504,8 +5504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebbe1c25dfc64b48971ee72bfec54af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  planeSize: {x: 3, y: 3}
-  planeResolution: 5
+  planeSize: {x: 10, y: 10}
+  planeResolution: 15
 --- !u!33 &467775728
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22094,7 +22094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6.4
-  radius: 43
+  radius: 25
 --- !u!195 &1820646570
 NavMeshAgent:
   m_ObjectHideFlags: 0
